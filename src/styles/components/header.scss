@@ -1,0 +1,98 @@
+header {
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+ 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .brand {
+            background-image: url(/logo-light.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 1.75rem;
+
+            @media screen and (min-width: $medium) {
+            }
+
+            span {
+                visibility: hidden;
+            }
+        }
+        .menu-toggle {
+            background: none;
+            border: 0;
+
+            @media screen and (min-width: $medium) {
+                display: none;
+            }
+        }
+
+        
+
+        menu {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            transition: .3s height ease;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            @media screen and (min-width: $medium) {
+                display: flex;
+                width: 50%;
+                position: static;
+                justify-content: flex-end;
+            }
+
+            &.open {
+                height: calc(100vh -3rem);
+                background-color: #fff;
+
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                height: 100%;
+            }
+
+            &.close {
+                height: 0px;
+                overflow: hidden;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                position: relative;
+                font-variation-settings: 'wght' 600;
+                font-weight: 600;
+
+                
+                @media screen and (min-width: $medium) {
+                    margin-left: 2rem;
+
+                    &:not(.active) {
+                        color: $text-light;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $medium) {
+                &.open,
+                &.close {
+                    height: auto;
+                    overflow: visible;
+                }
+            }
+          
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.home {
+
+    .home-featured-work {
+        & > h2 {
+            width: 100%;
+
+            @media screen and (min-width: $medium) {
+                width: .25%;
+            }
+        }
+
+        .mosaic-grid {
+            margin: 3.5rem 0 0;
+        }
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+}

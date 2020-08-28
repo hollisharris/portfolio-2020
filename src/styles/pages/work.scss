@@ -1,0 +1,122 @@
+.works {
+ 
+}
+
+.work {
+    .intro {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: $medium) {
+            margin-bottom: 5rem;
+        }
+        .about {
+            max-width: $column12;
+
+            @media screen and (min-width: $medium) {
+                max-width: $column7;
+            }
+        }
+
+        .role {
+            width: $column12;
+            margin-bottom: 3rem;
+
+            @media screen and (min-width: $medium) {
+                margin-bottom: 0;
+            }
+
+            .teaser {
+                border-top: 1px solid $line;
+                padding-top: 1.25rem;
+                margin-bottom: 1.85rem;
+                margin-top: .65rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            @media screen and (min-width: $medium) {
+                width: $column2;
+                margin-right: $column1;
+            }
+        }
+    }
+}
+
+.work-content {
+    h2, h3, h4, h5, h6 {
+        color: $text-dark;
+        margin-bottom: 1.5rem;
+    }
+    .text-block {
+        p { color: $text-light;}
+    }
+
+    .container {
+        justify-content: center;
+
+        .content {
+            max-width: $column12;
+
+            @media screen and (min-width: $small) {
+                max-width: $column10;
+            }
+
+            @media screen and (min-width: $medium) {
+                max-width: $column7;
+            }
+
+            h2:not(.teaser) {
+                margin-top: 4rem;
+
+                @media screen and (min-width: $medium) {
+                    margin-top: 8rem;
+                    font-size: 3rem;
+                }
+               
+            }
+
+            h3 {
+                @media screen and (min-width: $medium) {
+                    font-size: 2.25rem;
+                    letter-spacing: -.02em;
+                }
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+
+            }
+
+            p {
+                margin-bottom: 2rem;
+                color: rgba(41, 41, 41, 1);
+            }
+
+            li p {
+                margin: 0;
+            }
+
+            .breakout {
+                width: 100vw;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .blockquote {
+                margin: 4rem 0;
+                @media screen and (min-width: $medium) {
+                    margin-left: -$column2;
+                }
+                blockquote {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    
+}

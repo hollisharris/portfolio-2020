@@ -1,0 +1,38 @@
+// Breakpoints
+$medium: 1024px;
+$small: 720px;
+
+// Column Widths
+$column1: 8.3333%;
+$column2: 16.6667%;
+$column3: 25%;
+$column4: 33.3333%;
+$column5: 41.6667%;
+$column6: 50%;
+$column7: 58.3333%;
+$column8: 66.6667%;
+$column9: 75%;
+$column10: 83.3333%;
+$column11: 91.6667%;
+$column12: 100%;
+
+// Utilities
+$container: 1400px;
+$offset1: $column1;
+
+.container {
+    max-width: $container;
+    padding-left: $column1;
+    padding-right: $column1;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: $medium) {
+    .offset1 {
+        margin-left: $offset1;
+    }
+}

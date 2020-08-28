@@ -15,8 +15,19 @@
   },
   "dependencies": {
     "gatsby": "^2.23.12",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-manifest": "^2.4.26",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sharp": "^2.6.29",
+    "gatsby-source-storyblok": "^1.1.0",
+    "gatsby-storyblok-image": "^0.2.2",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "storyblok-rich-text-react-renderer": "^1.1.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
