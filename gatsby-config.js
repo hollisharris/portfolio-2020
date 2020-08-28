@@ -14,7 +14,7 @@ module.exports = {
         short_name: `Hollis Harris`,
         start_url: `/`,
         display: `standalone`,
-        icon: `/static/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `/favicon-32x32.png`,
