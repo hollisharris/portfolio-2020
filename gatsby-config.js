@@ -7,11 +7,6 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -19,7 +14,7 @@ module.exports = {
         short_name: `Hollis Harris`,
         start_url: `/`,
         display: `standalone`,
-        icon: `/favicon.png`, // This path is relative to the root of the site.
+        icon: `/static/favicon.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `/favicon-32x32.png`,
@@ -27,13 +22,18 @@ module.exports = {
             type: `image/png`,
           },
           {
-            src: `/favicons/android-chrome-260x260.png`,
+            src: `/favicon-260x260.png`,
             sizes: `260x260`,
             type: `image/png`,
           },
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-image`,
     {
       resolve: 'gatsby-source-storyblok',
       options: {
