@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import { graphql } from 'gatsby'
 import { render } from 'storyblok-rich-text-react-renderer';
 
@@ -8,9 +8,9 @@ import Layout from "../components/Layout"
 import TextBlock from "../components/TextBlock"
 import Blockquote from "../components/Blockquote"
 import ContactCTA from "../components/ContactCTA"
-const ImageColumns = React.lazy(() => import('../components/ImageColumns'))
-const StickySection = React.lazy(() => import('../components/StickySection'))
-const Results = React.lazy(() => import('../components/Results'))
+import ImageColumns from '../components/ImageColumns'
+import StickySection from '../components/StickySection'
+import Results from '../components/Results'
 
 export const query = graphql`
   query($full_slug: String!) {
@@ -96,9 +96,9 @@ export default function WorkTemplate({data}) {
                       blokResolvers: {
                           ['blockquote']: (props) => <Blockquote quote={props.quote} author={props.author} />,
                           ['richtext']: (props) => <div className="breakout"><TextBlock teaser={props.teaser}position={props.position} className="d-flex">{render(props.content)}</TextBlock></div>,
-                          ['image_columns']: (props) => <Suspense fallback={<div>Loading...</div>}><div className="breakout"><div className="container"><ImageColumns columns={props.column_group}/></div></div></Suspense>,
-                          ['sticky_section']: (props) => <Suspense fallback={<div>Loading...</div>}><div className="breakout"><StickySection position={props.content_position} sticky={props.sticky} content={render(props.content)} media={props.image}/></div></Suspense>,
-                          ['results']: (props) => <Suspense fallback={<div>Loading...</div>}><div className="breakout"><Results teaser={props.teaser} headline={props.headline} description={render(props.description)} results={props.results}/></div></Suspense>
+                          ['image_columns']: (props) => <div className="breakout"><div className="container"><ImageColumns columns={props.column_group}/></div></div>,
+                          ['sticky_section']: (props) => <div className="breakout"><StickySection position={props.content_position} sticky={props.sticky} content={render(props.content)} media={props.image}/></div>,
+                          ['results']: (props) => <div className="breakout"><Results teaser={props.teaser} headline={props.headline} description={render(props.description)} results={props.results}/></div>
                       }
                   })}
                 </div>
