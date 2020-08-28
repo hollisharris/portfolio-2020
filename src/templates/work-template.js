@@ -1,8 +1,9 @@
 import React, { Suspense } from "react"
+import { graphql } from 'gatsby'
 import { render } from 'storyblok-rich-text-react-renderer';
 
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 import TextBlock from "../components/TextBlock"
 import Blockquote from "../components/Blockquote"

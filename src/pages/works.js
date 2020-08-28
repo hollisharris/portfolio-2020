@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Mosaic from "../components/Mosaic"
 import ContactCTA from "../components/ContactCTA"
 
