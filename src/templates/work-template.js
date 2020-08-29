@@ -31,9 +31,9 @@ export const query = graphql`
   }
 `
 
+
 export default function WorkTemplate({data}) {
     const doc = JSON.parse(data.storyblokEntry.content);
-    console.log(doc)
 
     // const roles = doc.roles.map((role, index) => {
     //   return <li key={index} >{role}</li>
@@ -53,6 +53,7 @@ export default function WorkTemplate({data}) {
     //       </TextBlock>);
     //   }
     // })
+
 
     return (
         <Layout className="work">
@@ -78,7 +79,7 @@ export default function WorkTemplate({data}) {
                     <div className="about">
                         <p className="large">
                             {doc.hero_description}
-                        </p>
+                        </p>g
                     </div>
                 </div>
             </section>

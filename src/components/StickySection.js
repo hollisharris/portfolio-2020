@@ -1,6 +1,6 @@
 import React from "react"
 
-const ImageColumns = React.lazy(() => import('../components/ImageColumns'))
+import ImageColumns from '../components/ImageColumns'
 
 export default function StickySection({ position, sticky, content, media }) {
     return (
